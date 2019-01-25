@@ -1,0 +1,87 @@
+// 头部样式块
+.wjs_header{
+    height: 50px;
+    line-height: 50px;
+    border-bottom: 1px solid #ccc;
+    text-align: center;
+    .row{
+        .wjs_code{
+            width: 100%;
+            height: 100%;
+            display:block;
+            position: relative;
+            > img {
+                border:1px solid #ccc;
+                border-top:none;
+                display: none;
+                position: absolute;
+                left: 50%;
+                top: 49px;
+                transform: translate(-50%,0);
+            }
+            &:hover{
+                > img {
+                    display: block;
+                }
+            }
+        }
+        > div:nth-of-type(1) ~ div{
+            border-left: 1px solid #ccc;
+
+        }
+        > div:nth-last-of-type(1){
+            > .btn-danger{
+                border: none;
+                background-color: #e92322;
+            }
+            > .btn{
+                padding: 3px 15px;
+            }
+            > .btn-link{
+                color:#333;
+                &:hover{
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
+
+// 导航样式
+.wjs_nav{
+    .navbar-toggle{
+        margin-top: 23px;
+    }
+    .navbar-brand{
+        height: 80px;
+        line-height: 50px;
+        font-size: 40px;
+        color:#000;
+        > span:nth-of-type(1){
+            color:#e92322;
+        }
+        &:hover{
+            color:#000;
+        }
+    }
+    .navbar-nav{
+        > li{
+            > a{
+                font-size: 16px;
+                color:#333;
+                line-height: 50px;
+            }
+            > a:hover,a:focus{
+                border-bottom: 3px solid #e92322;
+                color:#333;
+            }
+        }
+        > .active{
+            > a,a:hover,a:focus{
+                color:#333;
+                background-color:transparent;
+                border-bottom: 3px solid #e92322;
+            }
+        }
+    }
+}
